@@ -16,7 +16,7 @@ else:
 if bool(tag_results):
     for tag, counter in list(tag_results.items()):
         items.setItem(
-            arg=tag, # we cannot yet send a hash character with `thearchive://match/{query}`
+            arg="#%s" % tag,
             subtitle="{0} Hit(s), (\u2318 Paste Into Frontmost Application)".format(counter),
             title=tag,
             valid=True,
